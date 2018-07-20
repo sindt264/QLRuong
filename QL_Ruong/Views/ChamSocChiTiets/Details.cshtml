@@ -1,0 +1,55 @@
+﻿@model QL_Ruong.Models.ChamSocChiTiet
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>ChamSocChiTiet</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ChamSoc.CS_Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ChamSoc.CS_Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CSCT_TenThuoc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CSCT_TenThuoc)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CSCT_SoLuong)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CSCT_SoLuong)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CSCT_Ngay)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CSCT_Ngay)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CSCT_TongTien)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CSCT_TongTien)
+        </dd>
+
+    </dl>
+</div>

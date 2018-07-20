@@ -1,0 +1,31 @@
+﻿@model QL_Ruong.Models.ChiTietUs
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>ChiTietUs</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.CTUSER_LEVEL)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CTUSER_LEVEL)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CTUSER_TRANGTHAI)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CTUSER_TRANGTHAI)
+        </dd>
+
+    </dl>
+</div>

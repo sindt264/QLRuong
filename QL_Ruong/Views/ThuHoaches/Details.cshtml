@@ -1,0 +1,63 @@
+﻿@model QL_Ruong.Models.ThuHoach
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>ThuHoach</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Ruong.Ruong_Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ruong.Ruong_Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TH_Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TH_Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TH_ChiSo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TH_ChiSo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TH_TienTrenDa)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TH_TienTrenDa)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TH_TongTien)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TH_TongTien)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TH_MoTa)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TH_MoTa)
+        </dd>
+
+    </dl>
+</div>

@@ -1,0 +1,55 @@
+﻿@model QL_Ruong.Models.User
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>User</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ChiTietUs.CTUSER_ID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ChiTietUs.CTUSER_ID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.User_Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.User_Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.User_Detail)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.User_Detail)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.User_TK)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.User_TK)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.User_MK)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.User_MK)
+        </dd>
+
+    </dl>
+</div>

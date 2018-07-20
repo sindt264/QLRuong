@@ -1,0 +1,53 @@
+﻿@model IEnumerable<QL_Ruong.Models.Ruong>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.User.User_Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Ruong_Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Ruong_DienTich)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Ruong_MoTa)
+        </th>
+        <th>Thao Tác</th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.User.User_Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Ruong_Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Ruong_DienTich)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Ruong_MoTa)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id = item.Ruong_ID }) |
+            <a href="/Chamsocs/index/@item.Ruong_ID">Chăm sóc</a> |
+            <a href="/ThuHoaches/index/@item.Ruong_ID">Thu Hoạch</a> |
+            @Html.ActionLink("Delete", "Delete", new { id = item.Ruong_ID })
+        </td>
+    </tr>
+}
+
+</table>

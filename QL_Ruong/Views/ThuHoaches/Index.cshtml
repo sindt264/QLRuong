@@ -1,0 +1,63 @@
+﻿@model IEnumerable<QL_Ruong.Models.ThuHoach>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Ruong.Ruong_Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TH_Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TH_ChiSo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TH_TienTrenDa)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TH_TongTien)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TH_MoTa)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Ruong.Ruong_Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TH_Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TH_ChiSo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TH_TienTrenDa)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TH_TongTien)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TH_MoTa)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.TH_ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.TH_ID })
+        </td>
+    </tr>
+}
+
+</table>

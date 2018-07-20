@@ -1,0 +1,65 @@
+﻿@model QL_Ruong.Models.ChamSocChiTiet
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>ChamSocChiTiet</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ChamSoc.CS_Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ChamSoc.CS_Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CSCT_TenThuoc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CSCT_TenThuoc)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CSCT_SoLuong)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CSCT_SoLuong)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CSCT_Ngay)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CSCT_Ngay)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CSCT_TongTien)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CSCT_TongTien)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index/" + Session["Ruong_ID"])
+        </div>
+    }
+</div>
